@@ -1,11 +1,11 @@
+// Users.js
 import React from "react";
 
 function Users({ users, dispatch, setBalance, balance }) {
-    console.log(users);
-
     function handleFuel() {
-        // dispatch({ type: "fuel", setBalance, balance });
+        dispatch({ type: "fuel", setBalance, balance });
     }
+
     return (
         <div>
             <button onClick={() => handleFuel()} id="fill-fuel">
@@ -13,7 +13,7 @@ function Users({ users, dispatch, setBalance, balance }) {
             </button>
             {users.map((user) => {
                 return (
-                    <div key={user.id} class="user">
+                    <div key={user.id} className="user">
                         {user.name}
                     </div>
                 );
